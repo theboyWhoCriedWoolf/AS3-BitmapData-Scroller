@@ -30,8 +30,8 @@ package com.scrollerComponent
 		protected var _velocityBuffer 			: Number 	= 0.06;
 		protected var _paddingColour 			: int 		= 0x00000000;
 		protected var _paddingAlpha				: Number 	= 0;
-		protected var _deltaTime				: Number 	= 30; 
-		protected var _timerDelay				: Number	= 30;
+		protected var _deltaTime				: Number 	= 25; 
+		protected var _timerDelay				: Number	= 1;
 		protected var _friction					: Number 	= 0.80;
 		protected var _iosSynthesizedLag		: Number	= 0.001;
 		protected var _centerSelectedDuration	: Number 	= 0.5; 
