@@ -29,8 +29,43 @@
 			_scrollingComponent.bitmapDataCollection = bitmapDataVect();			// pass in the collection of BitmapData
 			_scrollingComponent.initialiseScroller();								// initialise the scoller
 			addChild( _scrollingComponent as DisplayObject );						// add to the display list
+			
+			// the component automatically dispatches signals on item selected, movement Started 
+			// and movement completed
+			// to add the relevant listeners do the following:
+			
+			_scrollingComponent.itemSelectedSignal.add( itemSelected_handler );
+			_scrollingComponent.movementStartedSignal.add( movementStarted_handler );
+			_scrollingComponent.movementCompletedSignal.add( movementCompleted_handler );
 		}
 		
+	// [ HANDLERS
+		
+		/*
+		 * handler fired when item on list is selected
+		 */
+		 private function itemSelected_handler( selectedPanelID : Number ) : void
+		 {
+		 	// called each time an item is selected
+		 }
+		
+		/*
+		 * component movement started handler
+		 */
+		 private function movementStarted_handler() : void
+		 {
+			// called when the list starts moving
+		 }
+		 
+		 /*
+		  * component movement completed handler
+		  */
+		 private function movementCompleted_handler() : void
+		 {
+			// called when the list stops moving
+		 }
+		
+	//  ]
 		
 		/*
 		 * create a vector of Test BitmapData

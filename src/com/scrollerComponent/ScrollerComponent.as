@@ -155,7 +155,6 @@ package com.scrollerComponent
 		private function click_handler( eventVO : EventVO ) : void
 		{
 			if( !_tapBounds.containsPoint( new Point( eventVO.event.stageX, eventVO.event.stageY ) ) ) return;
-			movementStartedSignal.dispatch();
 			
 			if( _startingAtCenterPos )
 			{
@@ -163,6 +162,7 @@ package com.scrollerComponent
 				if( _addOverstate ) interactionHandler.addSelectedState( bitmapDataScroller, eventVO );
 				interactionHandler.centerSelectedPanel( bitmapDataScroller, animator, eventVO, _centerPoint );
 				itemSelectedSignal.dispatch( interactionHandler.currentSelectedID );
+				movementStartedSignal.dispatch();
 			}
 			else
 			{

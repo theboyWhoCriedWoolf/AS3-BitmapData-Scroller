@@ -63,7 +63,7 @@ package com.scrollerComponent.core.interaction
 					_currentID -= ( _vel <= 1 ) ? 0 : _vel;  
 					if( _currentID < 0 ) _currentID = 0;
 				}
-				else { _currentID -= 1; } 
+				// else { _currentID -= 1; } 
 			}
 			
 			_target = ( _snapping )? targetPosition( _currentID ) : Math.floor( velocity  * _velBuffer );

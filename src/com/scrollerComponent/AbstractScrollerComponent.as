@@ -155,6 +155,7 @@ package com.scrollerComponent
 		public function set oneItemAtATime( swipeOneOnly : Boolean ) : void
 		{
 			_moveByOneOnly = swipeOneOnly;
+			if( _moveByOneOnly ) snapping = true;
 		}
 		private var _moveByOneOnly : Boolean = false;
 		
